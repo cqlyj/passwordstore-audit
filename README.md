@@ -1,4 +1,3 @@
-
 # PasswordStore
 
 <br/>
@@ -7,7 +6,7 @@
 </p>
 <br/>
 
-A smart contract applicatoin for storing a password. Users should be able to store a password and then retrieve it later. Others should not be able to access the password. 
+A smart contract applicatoin for storing a password. Users should be able to store a password and then retrieve it later. Others should not be able to access the password.
 
 - [PasswordStore](#passwordstore)
 - [Getting Started](#getting-started)
@@ -74,7 +73,7 @@ forge test
 forge coverage
 ```
 
-and for coverage based testing: 
+and for coverage based testing:
 
 ```
 forge coverage --report debug
@@ -82,18 +81,25 @@ forge coverage --report debug
 
 # Audit Scope Details
 
-- Commit Hash:  2e8f81e263b3a9d18fab4fb5c46805ffc10a9990
+- Commit Hash: 2e8f81e263b3a9d18fab4fb5c46805ffc10a9990
 - In Scope:
+
 ```
 ./src/
 └── PasswordStore.sol
 ```
+
 - Solc Version: 0.8.18
 - Chain(s) to deploy contract to: Ethereum
 
+## Roles
+
+- Owner: The user who can set the password and read the password.
+- Outsides: No one else should be able to set or read the password.
+
 ## Create the audit report
 
-View the [audit-report-templating](https://github.com/Cyfrin/audit-report-templating) repo to install all dependencies. 
+View the [audit-report-templating](https://github.com/Cyfrin/audit-report-templating) repo to install all dependencies.
 
 ```bash
 cd audits
